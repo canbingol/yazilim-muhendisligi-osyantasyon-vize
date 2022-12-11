@@ -1,0 +1,323 @@
+
+ismail can bingöl 
+225541073
+ 
+ video linki =
+ https://www.youtube.com/watch?v=XuWMmMW1LbE
+ 
+ 
+ ----------------------------------------------------------------------------------------
+ kodlar
+ ---------------------------------------------------------------------------------------
+ saat hesaplama =
+
+
+
+import java.util.Scanner;
+
+public class index {
+
+	public static void main(String[] args) {
+		
+	Scanner scan = new Scanner(System.in);
+	
+	System.out.println("100 ile 500 arasinda dakika girin");
+		int sayı = scan.nextInt();
+		
+		while (sayı<100 || sayı>500) {
+			System.err.println("hatali giris yeniden giris yaptin ");    //istenen değerlerde bir giriş yapılmazsa hata verecek
+			System.out.println("100 ile 500 arasinda bir sayi gir");
+		    sayı = scan.nextInt();
+		}
+		int saat =  (sayı/60) ;       
+		int dakika = (sayı%60);
+		
+		System.out.println(sayı+" dakika "+saat+":"+dakika+ " dir" );
+		
+	}
+		}
+		
+	
+  -----------------------------------------------------------------------------------------------------
+ucgensel sayılar =
+
+
+public class ücgenselSayılar {
+
+	public static void main(String[] args) {
+
+int a = 0;                   
+                                                                      //  1 , 3 , 6 , 10 , 15 , 21 , 28 , 36 , 45 , 55
+for (int i =1;i<11;i++) {       
+	int c = a+ i;
+	System.out.print(c+" ,");
+	a = c;
+}
+ 
+
+	}
+}
+
+ 
+-----------------------------------------------------------------------------------------------
+cember cevresi hesaplama =
+
+
+import java.util.Scanner;
+
+public class cember {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+	        
+	        System.out.print("Cemberin yari Capini giriniz: ");
+	        int yarıcap = scan.nextInt();
+	        
+	        System.out.println("Cemberin cevresi = " + (2 * Math.PI * yarıcap)); 
+
+	}
+}
+
+
+ ---------------------------------------------------------------------------------------------------------
+ not ortalaması hesaplama =
+ 
+ 
+
+
+import java.util.Scanner;
+
+public class notHesaplama {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+	        
+	        System.out.print("Vize notunuzu giriniz: ");
+	        int vize = scan.nextInt();
+	        System.out.print("Final notunu giriniz: ");
+	        int fınal = scan.nextInt();
+	        
+	        double not = (vize * 0.4) + (fınal * 0.6);   // vizenin %40 ı ve finalin %60 ı alınacak 
+	        
+	        System.out.println(" notun = " + not);
+	        
+	        if(not > 90) {
+	            System.out.println("AA ile dersi geçtin");
+	        }
+	        else if(not > 85) {
+	            System.out.println("BA ile dersi geçtin");
+	        }
+	        else if(not > 80) {
+	            System.out.println("BB ile dersi geçtin");
+	        }
+	        else if(not > 75) {
+	            System.out.println("CB ile dersi geçtin");
+	        }
+	        else if(not > 50) {
+	            System.out.println("gectin");
+	        }
+	        else {
+	            System.out.println("Kladın");
+	        }
+	  
+	}
+
+}
+
+.------------------------------------------------------------------------------------------
+faktoriyel hesabı =
+
+
+
+
+import java.util.Scanner;
+
+public class faktöriyel {
+
+	public static void main(String[] args) {
+		  
+		Scanner scan = new Scanner(System.in);
+	        int faktoriyel = 1;
+	        
+	        System.out.println("Bir sayi giriniz: ");
+	        int sayi = scan.nextInt();
+	        
+	        for(int i = 1; i <= sayi; i++)
+	        {
+	        	                                                             // 6! = 1*2*3*4*5*6 =720
+	        	faktoriyel = faktoriyel * i;  
+	        }
+	        System.out.println(sayi + " nın faktoriyeli= " + faktoriyel);
+	}
+
+
+
+}
+---------------------------------------------------------------------------------------------------------
+basamak sayısı hesabı
+
+import java.util.Scanner;
+
+public class basamakSayısı {
+
+	public static void main(String[] args) {
+		 
+		Scanner input = new Scanner(System.in);
+	        int sayac = 0;
+	        
+	        System.out.print("Bir sayi giriniz: ");
+	        int sayi = input.nextInt();
+	        
+	        while(sayi > 0) {
+	            sayi /= 10;   //sayi = sayı%10; 
+	            sayac++;
+	        }
+	        System.out.println("Girdiginiz sayinin basamak sayisi = " + sayac);
+
+	}
+
+}
+
+----------------------------------------------------------------------------------------------
+hesap makınası =
+
+public class hesapMakinası {
+
+	public static void main(String[] args) {
+      
+		Scanner input = new Scanner(System.in);
+        
+        System.out.print("1. Sayıyı gir: ");
+        int sayi1 = input.nextInt();
+        System.out.print("2. Sayıyı gir: ");
+        int sayi2 = input.nextInt();
+        
+        System.out.println("islemi secin");
+        System.out.println("1 = toplama");
+        System.out.println("2 = cikarma");
+        System.out.println("3 = carpma ");
+        System.out.println("4 = bolme");
+        
+        System.out.print("Secimininizi giriniz: ");
+        int secim = input.nextInt();
+        
+        switch(secim) {
+        case 1:
+            System.out.println("Toplama isleminin sonucu = " + (sayi1 + sayi2));
+            break;
+        case 2:
+            System.out.println("Çıkarma isleminin sonucu = " + (sayi1 - sayi2));
+            break;
+        case 3:
+   System.out.println("Carpma isleminin sonucu = " + (sayi1 * sayi2));
+            break;
+        case 4:
+            System.out.println("Bölme isleminin sonucu = " + (float)sayi1 / sayi2);
+        }
+	}
+  }
+  -------------------------------------------------------------------------------------------------
+  
+  bedeb kutle indeksi =
+  
+  import java.util.Scanner;
+
+public class BKİ {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+        
+        System.out.print("Boyunuzu giriniz  : ");
+        float boy = scan.nextFloat();
+        System.out.print("Kilonuzu giriniz: ");
+        int kilo = scan.nextInt();
+        
+        float bki = kilo / (boy*boy);                    
+        System.out.println("Beden Kitle indeksiniz = " + bki);
+        
+        if(bki < 18) {
+            System.out.println("Zayif");
+        }
+        else if(bki < 25) {
+            System.out.println("Normal");
+        }
+        else if(bki < 30) {
+            System.out.println("Hafif şişman");
+        }
+        else if(bki < 35) {
+            System.out.println("Sisman");
+        }
+        else {
+            System.out.println("Obez");
+        }
+	}
+
+}
+
+---------------------------------------------------------------------------------------
+
+dikdortgen = 
+
+import java.util.Scanner;
+
+public class dikdörtgen {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("boy gir");                                                    
+		int boy = input.nextInt();
+		
+		System.out.println("en gir");
+		int en = input.nextInt();
+	
+	
+
+	for (int i=0 ;i<boy;i++)                         
+{                                          
+	         for(int j=0;j<en;j++) {
+					System.out.print("*");
+			}
+			System.out.println("");
+			
+		}
+	}
+}
+  
+  
+  --------------------------------------------------------------------------------------
+  fibonacci =
+  
+  import java.util.Scanner;
+
+public class fibonaccı {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+      
+	System.out.println("lutfen sayi giriniz");
+	int sayı = input.nextInt();
+	
+	int a = 1;
+	
+	System.out.print(a+" ,");
+	System.out.print(a+" ,");
+   	
+	                                                          //1 , 1 , 2 , 3 , 5 , 8 , 13 , 21 ...
+
+	
+	int e = 1;
+	for (int i=1;i<=sayı;i++) {                      
+		int c = e+a;	                                  
+		a=e;
+		e=c;
+		System.out.print(c+ " ,");
+		
+	}
+	
+	
+	
